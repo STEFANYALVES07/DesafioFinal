@@ -1,51 +1,27 @@
-import { View, ScrollView, Image, TouchableOpacity, Text } from "react-native";
-import { styles } from "./src/styles/StyleSheet";
-import TxtComponents from "./src/components/TxtComponents";
-import BtnComponent from "./src/components/BtnComponent";
-import Modal1 from "./src/components/ModalComponent";
-import carrosel from "./src/components/CarrosselComponent";
-import React, { useState } from "react";
+import React from "react";
+
+//Stack Navigation
+import { NavigationContainer } from "@react-navigation/native"; //envolver a navegação da aplicação.
+import { createNativeStackNavigator } from "@react-navigation/native-stack"; //cria um navegador de pilha
+
+// Isso permite que você use esse navegador de pilha para definir a navegação em sua aplicação.
+const Stack = createNativeStackNavigator();
+
+//paginas
+import Home from "./src/pages/Home";
+import Copo from "./src/pages/Copo";
+import Tigela from "./src/pages/Tigela";
+import Acaiumlitro from "./src/pages/Acaiumlitro";
 
 export default function App() {
-  const [visible, setVisible] = useState(false);
-
-  visModal = (vis) => {
-    if (!visible) {
-      setVisible(vis);
-    } else {
-      setVisible(vis);
-    }
-  };
-
   return (
-    <View style={styles.container}>
-      <View style={styles.header}></View>
-      <Image style={styles.logo} source={require("./src/imagens/logo.jpeg")} />
-
-      <TxtComponents styletxt={styles.txt} txt="Jam's Açaí" />
-      <TxtComponents
-        styletxt={styles.endereco}
-        txt="Av.Ampelio gazetta, 413 - Nova Odessa"
-      />
-      <TxtComponents
-        styletxt={styles.entrega}
-        txt="Entrega: 40 min - 1h               Retirada: 30min"
-      />
-      <TouchableOpacity style={styles.horario} onPress={() => visModal(true)}>
-        <Text>Horários</Text>
-      </TouchableOpacity>
-      {/*Importando o Modal*/}
-      <Modal1 />
-
-      <ScrollView>
-        <Image
-          style={styles.img}
-          source={require("./src/imagens/açaí1.jpeg")}
-        />
-        <TxtComponents styletxt={styles.montar} txt="Monte seu Açaí" />
-        <BtnComponent />
-      </ScrollView>
-      <View style={styles.footer}></View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Copo" component={Copo} />
+        <Stack.Screen name="Tigela" component={Tigela} />
+        <Stack.Screen name="Acaiumlitro" component={Acaiumlitro} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }

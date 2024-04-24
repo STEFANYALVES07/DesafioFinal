@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
   logo: {
     borderRadius: 100,
     height: 150,
@@ -15,11 +14,9 @@ export const styles = StyleSheet.create({
     position: "relative",
     marginTop: -100,
   },
-
   header: {
     backgroundColor: "#6e07ad",
     height: 150,
-    width: 5000,
     position: "relative",
   },
   txt: {
@@ -38,7 +35,6 @@ export const styles = StyleSheet.create({
   },
 
   montar: {
-    textAlign: "center",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 30,
@@ -106,10 +102,9 @@ export const styles = StyleSheet.create({
     bottom: 60,
   },
 
-  horario: {
-    borderWidth: 2,
-    borderColor: "#cba9d6",
-    borderRadius: 5,
+  hrBtn: {
+    backgroundColor: "red",
+    borderR,
   },
 
   acai: {
@@ -125,6 +120,45 @@ export const styles = StyleSheet.create({
   },
 
   preço: {
+    color: "purple",
+    textAlign: "center",
+    fontSize: 20,
+    top: 60,
+  },
+
+  tigela: {
+    width: 100,
+    height: 115,
+    borderRadius: 5,
+    bottom: 60,
+  },
+
+  taca: {
+    width: 100,
+    height: 115,
+    borderRadius: 5,
+    bottom: 60,
+  },
+
+  horario: {
+    backgroundColor: "#cba9d6",
+    borderRadius: 2,
+    fontFamily: 500,
+  },
+
+  acai: {
+    color: "#8662e3",
+    textAlign: "center",
+  },
+
+  tex: {
+    color: "black",
+    textAlign: "center",
+    fontSize: 20,
+    top: 30,
+  },
+
+  preco: {
     color: "purple",
     textAlign: "center",
     fontSize: 20,
