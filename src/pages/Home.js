@@ -10,15 +10,15 @@ import Carousel from "react-native-snap-carousel";
 const data = [
   {
     imgUrl:
-      "https://images.pexels.com/photos/1382726/pexels-photo-1382726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://i.pinimg.com/564x/1d/3f/31/1d3f31871f9d317f381ec33aaf9c3921.jpg",
   },
   {
     imgUrl:
-      "https://images.pexels.com/photos/2525714/pexels-photo-2525714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://i.pinimg.com/564x/73/64/7c/73647c69c6e43d1964ed3f79fcc36c5e.jpg",
   },
   {
     imgUrl:
-      "https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://i.pinimg.com/236x/11/16/d8/1116d87a6748a03df56009fd8f20c102.jpg",
   },
 ];
 

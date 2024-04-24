@@ -9,6 +9,7 @@ export default function BtnComponent() {
     console.log("Açai do Jam's o melhor!");
   };
   const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <TouchableOpacity

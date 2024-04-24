@@ -104,7 +104,6 @@ export const styles = StyleSheet.create({
 
   hrBtn: {
     backgroundColor: "red",
-    borderR,
   },
 
   acai: {
@@ -138,12 +137,6 @@ export const styles = StyleSheet.create({
     height: 115,
     borderRadius: 5,
     bottom: 60,
-  },
-
-  horario: {
-    backgroundColor: "#cba9d6",
-    borderRadius: 2,
-    fontFamily: 500,
   },
 
   acai: {

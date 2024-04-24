@@ -1,11 +1,8 @@
-import { View, FlatList } from "react-native";
-
-import { useNavigation } from "@react-navigation/native";
+import { View, FlatList, Text } from "react-native";
+import { styles } from "../styles/StyleSheet";
 
 export default function Tigela() {
-  const navigation = useNavigation();
-
-  const LISTA = [
+  const lista = [
     {
       id: "1",
       title: "Tigela de 800ml",
@@ -20,24 +17,17 @@ export default function Tigela() {
     },
   ];
 
-  const Item = ({ title }) => (
+  const Item = ({ item }) => (
     <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>{item.title}</Text>
     </View>
   );
   return (
     <View style={styles.container}>
       <FlatList
-        data={LISTA}
-        renderItem={({ item }) => <Item title={item.title} />}
+        data={lista}
+        renderItem={Item}
         keyExtractor={(item) => item.id}
-      />
-      <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
       />
     </View>
   );

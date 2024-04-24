@@ -1,11 +1,12 @@
-import { Text, Button, View } from "react-native";
+import { Text, Button, View, FlatList } from "react-native";
+import { styles } from "../styles/StyleSheet";
 
 import { useNavigation } from "@react-navigation/native";
 
 export default function Acaiumlitro() {
   const navigation = useNavigation();
 
-  const UML = [
+  const Acai = [
     {
       id: "1",
       title: "Açai trufado c/Nutella",
@@ -20,17 +21,17 @@ export default function Acaiumlitro() {
     },
   ];
 
-  const Item = ({ title }) => (
+  const Item = ({ item }) => (
     <View style={styles.item}>
-      <Text style={styles.titulolitro}>{titulolitro}</Text>
+      <Text style={styles.titulolitro}>{item.title}</Text>
     </View>
   );
   return (
     <View style={styles.container}>
       <FlatList
-        data={UML}
-        renderItem={({ itemlitro }) => <Item title={item.titulolitro} />}
-        keyExtractor={(itemlitro) => item.id}
+        data={Acai}
+        renderItem={({ item }) => <Item title={item.titulolitro} />}
+        keyExtractor={(Acai) => Acai.id}
       />
     </View>
   );
