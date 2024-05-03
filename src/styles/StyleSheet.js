@@ -7,6 +7,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  container2: {
+    flex: 1,
+    backgroundColor: "#e6dfeb",
+    alignContent: "center",
+    alignItems: "center",
+  },
   logo: {
     borderRadius: 100,
     height: 150,
@@ -17,6 +23,12 @@ export const styles = StyleSheet.create({
   header: {
     backgroundColor: "#6e07ad",
     height: 150,
+    width: 5000,
+    position: "relative",
+  },
+  header2: {
+    backgroundColor: "#6e07ad",
+    height: 70,
     width: 5000,
     position: "relative",
   },
@@ -36,11 +48,10 @@ export const styles = StyleSheet.create({
   },
 
   montar: {
-    top:2,
+    top: 2,
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 30,
-    
   },
 
   img: {
@@ -48,11 +59,11 @@ export const styles = StyleSheet.create({
     height: 350,
     alignItems: "center",
     justifyContent: "center",
-    top:20,
+    top: 20,
   },
 
   acaiBowl: {
-    top:10,
+    top: 10,
     width: 380,
     height: 120,
     marginVertical: 10,
@@ -74,25 +85,21 @@ export const styles = StyleSheet.create({
     color: "white",
   },
 
-  
   dia: {
     fontSize: 20,
     textAlign: "center",
     borderColor: "gray",
     borderWidth: 0.5,
-    
   },
 
   copo: {
     width: 380,
     height: 120,
-
   },
 
   tigela22: {
     width: 380,
     height: 120,
-
   },
 
   taça: {
@@ -157,9 +164,92 @@ export const styles = StyleSheet.create({
     top: 60,
     fontFamily: "italic",
   },
-  
-  imgView:{
+
+  imgView: {
     backgroundColor: "#000000bc",
-     flex: 1
-  }
+    flex: 1,
+  },
+  title: {
+    top: 2,
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 20,
+    color: "#6e07ad",
+  },
+  picker: {
+    width: "80%",
+    height: 40,
+    borderColor: "RED",
+    borderWidth: 1,
+  },
+  pickerItem: {
+    fontSize: 16,
+    color: "#6e07ad",
+  },
+
+  Contato: {
+    color: "#6e07ad",
+    fontSize: 25,
+    top: 35,
+    fontWeight: "bold",
+  },
+  titlemap: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  mapContainer: {
+    width: "100%",
+    height: 300,
+    borderRadius: 10,
+    overflow: "hidden",
+    marginBottom: 20,
+  },
+  mapImage: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+  },
+  end: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+
+  Qs: {
+    top: 50,
+    textAlign: "center",
+    width: 300,
+  },
+
+  txt1: {
+    color: "#6e07ad",
+    fontSize: 25,
+    top: 30,
+    fontFamily: "Didot",
+  },
+
+  txt2: {
+    backgroundColor: "white",
+    borderRadius: 2,
+    top: 50,
+    width: 300,
+    fontSize: 15,
+    textAlign: "center",
+  },
+
+  txt3: {
+    color: "#6e07ad",
+    fontSize: 25,
+    bottom: 120,
+  },
+
+  txt4: {
+    backgroundColor: "white",
+    borderRadius: 2,
+    width: 300,
+    fontSize: 15,
+    textAlign: "center",
+    bottom: 300,
+  },
 });

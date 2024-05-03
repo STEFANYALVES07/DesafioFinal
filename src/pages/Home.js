@@ -36,8 +36,6 @@ function CarouselCardItem({ item }) {
 export default function Home() {
   //constante para rotas
 
-
-
   return (
     <View style={styles.container}>
       <View style={styles.header}></View>
@@ -45,15 +43,11 @@ export default function Home() {
 
       <TxtComponents styletxt={styles.txt} txt="Jam's Açaí" />
       <ScrollView>
-      <TxtComponents
-        styletxt={styles.endereco}
-        txt="Av.Ampelio gazetta, 413 - Nova Odessa"
-      />
-      <TxtComponents
-        styletxt={styles.entrega}
-        txt="Entrega: 40 min - 1h               Retirada: 30min"
-      />
-    
+        <TxtComponents
+          styletxt={styles.entrega}
+          txt="Entrega: 40 min - 1h               Retirada: 30min"
+        />
+
         <Carousel
           data={data}
           renderItem={CarouselCardItem}
