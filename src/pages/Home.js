@@ -2,7 +2,6 @@ import { View, ScrollView, Image, TouchableOpacity, Text } from "react-native";
 import { styles } from "../styles/StyleSheet";
 import TxtComponents from "../components/TxtComponents";
 import BtnComponent from "../components/BtnComponent";
-import Modal1 from "../components/ModalComponent";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import Carousel from "react-native-snap-carousel";
@@ -36,16 +35,8 @@ function CarouselCardItem({ item }) {
 
 export default function Home() {
   //constante para rotas
-  const navigation = useNavigation();
 
-  const [visible, setVisible] = useState(false);
-  visModal = (vis) => {
-    if (!visible) {
-      setVisible(vis);
-    } else {
-      setVisible(vis);
-    }
-  };
+
 
   return (
     <View style={styles.container}>
@@ -53,6 +44,7 @@ export default function Home() {
       <Image style={styles.logo} source={require("../imagens/logo.jpeg")} />
 
       <TxtComponents styletxt={styles.txt} txt="Jam's Açaí" />
+      <ScrollView>
       <TxtComponents
         styletxt={styles.endereco}
         txt="Av.Ampelio gazetta, 413 - Nova Odessa"
@@ -61,14 +53,7 @@ export default function Home() {
         styletxt={styles.entrega}
         txt="Entrega: 40 min - 1h               Retirada: 30min"
       />
-      <TouchableOpacity style={styles.hrBtn} onPress={() => visModal(true)}>
-        <TxtComponents styletxt={styles.hr} txt="Horários" />
-      </TouchableOpacity>
-
-      {/*Importando o Modal*/}
-      <Modal1 />
-
-      <ScrollView>
+    
         <Carousel
           data={data}
           renderItem={CarouselCardItem}

@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
   header: {
     backgroundColor: "#6e07ad",
     height: 150,
+    width: 5000,
     position: "relative",
   },
   txt: {
@@ -35,9 +36,11 @@ export const styles = StyleSheet.create({
   },
 
   montar: {
+    top:2,
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 30,
+    
   },
 
   img: {
@@ -45,16 +48,15 @@ export const styles = StyleSheet.create({
     height: 350,
     alignItems: "center",
     justifyContent: "center",
+    top:20,
   },
 
   acaiBowl: {
+    top:10,
     width: 380,
     height: 120,
-    backgroundColor: "#e5e3e6",
     marginVertical: 10,
-    borderWidth: 2,
     borderColor: "#cba9d6",
-    borderRadius: 5,
   },
   Modal1: {
     backgroundColor: "#e6dfeb",
@@ -71,39 +73,36 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     color: "white",
   },
-  header2: {
-    backgroundColor: "#6e07ad",
-    height: 90,
-    width: 5000,
-    justifyContent: "center",
-  },
+
+  
   dia: {
     fontSize: 20,
+    textAlign: "center",
+    borderColor: "gray",
+    borderWidth: 0.5,
+    
   },
 
   copo: {
-    width: 100,
-    height: 115,
-    borderRadius: 5,
-    bottom: 60,
+    width: 380,
+    height: 120,
+
   },
 
-  tigela: {
-    width: 100,
-    height: 115,
-    borderRadius: 5,
-    bottom: 60,
+  tigela22: {
+    width: 380,
+    height: 120,
+
   },
 
   taça: {
-    width: 100,
-    height: 115,
-    borderRadius: 5,
-    bottom: 60,
+    width: 380,
+    height: 120,
   },
 
   hrBtn: {
-    backgroundColor: "red",
+    backgroundColor: "#cba9d6",
+    borderRadius: 5,
   },
 
   acai: {
@@ -113,9 +112,9 @@ export const styles = StyleSheet.create({
 
   tex: {
     color: "black",
-    textAlign: "center",
     fontSize: 20,
     top: 30,
+    textAlign: "center",
   },
 
   preço: {
@@ -145,16 +144,22 @@ export const styles = StyleSheet.create({
   },
 
   tex: {
-    color: "black",
+    color: "white",
     textAlign: "center",
     fontSize: 20,
     top: 30,
   },
 
   preco: {
-    color: "purple",
+    color: "white",
     textAlign: "center",
     fontSize: 20,
     top: 60,
+    fontFamily: "italic",
   },
+  
+  imgView:{
+    backgroundColor: "#000000bc",
+     flex: 1
+  }
 });

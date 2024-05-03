@@ -30,7 +30,7 @@ export default function Acaiumlitro() {
     <View style={styles.container}>
       <FlatList
         data={Acai}
-        renderItem={({ item }) => <Item title={item.titulolitro} />}
+        renderItem={ Item }
         keyExtractor={(Acai) => Acai.id}
       />
     </View>
