@@ -197,6 +197,7 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
+    top: 20,
   },
   mapContainer: {
     width: "100%",
@@ -211,9 +212,8 @@ export const styles = StyleSheet.create({
     resizeMode: "cover",
   },
   end: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 5,
+    fontSize: 15,
+    color: "blue",
   },
 
   Qs: {
@@ -230,7 +230,6 @@ export const styles = StyleSheet.create({
   },
 
   txt2: {
-    backgroundColor: "white",
     borderRadius: 2,
     top: 50,
     width: 300,
@@ -245,11 +244,26 @@ export const styles = StyleSheet.create({
   },
 
   txt4: {
-    backgroundColor: "white",
     borderRadius: 2,
     width: 300,
     fontSize: 15,
     textAlign: "center",
-    bottom: 300,
+    bottom: 320,
+  },
+
+  txt5: {
+    color: "#6e07ad",
+    fontSize: 25,
+    bottom: 280,
+    width: 370,
+    textAlign: "center",
+  },
+
+  txt6: {
+    borderRadius: 2,
+    width: 300,
+    fontSize: 15,
+    textAlign: "center",
+    bottom: 270,
   },
 });
