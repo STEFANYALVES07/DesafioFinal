@@ -1,43 +1,46 @@
-import { Text, Button, View, FlatList } from "react-native";
+import React, { useState } from "react";
+import { Text, View } from "react-native";
+import { Picker } from "@react-native-picker/picker";
 import { styles } from "../styles/StyleSheet";
 
-export default function Acaiumlitro() {
+export default function App() {
   const Acais = [
-    { id: "1", title: "Açai trufado c/Nutella" },
-    { id: "2", title: "Açai Pote  " },
-    { id: "3", title: "Tigela de 1,5L" },
+    { key: 1, sabor: "Açaí tradicional", valor: 30.0 },
+    { key: 2, sabor: "Açaí com ninho", valor: 45.0 },
+    { key: 3, sabor: "Açaí com frozen", valor: 45.0 },
   ];
-  const [selectedAcai, setSelectedAcai] = useState(Acais[0].key);
+
+  const [selectedAcai, setSelectedAcai] = useState(Acais[0].key); // Inicia com o valor da primeira pizza
+
   let AcaisItem = Acais.map((Acai, index) => (
-    <Picker.Item key={index} value={Acai.key} label={Acai.title} />
+    <Picker.Item key={index} value={pizza.key} label={pizza.sabor} />
   ));
 
   return (
-    <View style={styles.container2}>
-      <View style={styles.header}></View>
-      <Image style={styles.logo} source={require("../imagens/logo.jpeg")} />
-      <Text style={styles.title}>Escolha sua opção</Text>
+    <View style={styles.container}>
       <Picker
-        selectedValue={selectedAcai}
-        onValueChange={(itemValue) => setSelectedAcai(itemValue)}
+        selectedValue={selectedPizza}
+        onValueChange={(itemValue) => setSelectedPizza(itemValue)}
         style={styles.picker}
         itemStyle={styles.pickerItem}
       >
-        {AcaisItem}
+        {pizzasItem}
       </Picker>
-      {selectedAcai !== null ? (
-        <Text style={styles.tamanhoo}>
-          {" "}
-          <Text style={styles.textTigela}>
-            {Acais.find((Acai) => Acai.key == selectedAcai).title}
-          </Text>
-          <Text style={styles.textPrice}>
-            R$ {Acais.find((acai) => acai.key == selectedAcai).valor}
+
+      {/* Exibe detalhes da pizza selecionada se houver uma selecionada */}
+      {selectedPizza !== null ? (
+        <Text style={styles.text}>
+          Pizza Selecionada:{" "}
+          <Text style={styles.textPizza}>
+            {pizzas.find((pizza) => pizza.key == selectedPizza).sabor}
           </Text>
           {" - "}
+          <Text style={styles.textPrice}>
+            R$ {pizzas.find((pizza) => pizza.key == selectedPizza).valor}
+          </Text>
         </Text>
       ) : (
-        <Text style={styles.selecionado}>Pizza Selecionada: {" - "}</Text>
+        <Text style={styles.text}>Pizza Selecionada: {" - "}</Text>
       )}
     </View>
   );
